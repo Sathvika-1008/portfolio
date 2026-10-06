@@ -354,7 +354,7 @@ a.cert .meta{color:#93c5fd}
         <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/sathvika-reddy-1a46a6211/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
-    <form class="contact-form" id="form" action="https://formspree.io/f/xpwzabcd" method="POST">
+    <form class="contact-form" id="form" action="https://formspree.io/f/REALID" method="POST">
       <input id="name" name="name" placeholder="Your name" aria-label="Your name" required>
       <input id="from" name="email" type="email" placeholder="Your email" aria-label="Your email" required>
       <textarea id="msg" name="message" placeholder="Message" aria-label="Message" required></textarea>
@@ -419,7 +419,6 @@ document.querySelectorAll('.read-more-btn').forEach(b=>b.addEventListener('click
 const form=document.getElementById('form'),note=document.getElementById('formNote'),sendBtn=form.querySelector('button');
 form.addEventListener('submit',async e=>{
   e.preventDefault();
-  if(form.action.includes('xpwzabcd')){note.textContent='The contact form is not connected yet.';return}
   sendBtn.disabled=true;sendBtn.textContent='Sending...';note.textContent='';
   try{
     const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
